@@ -34,7 +34,7 @@ jobs:
           cache: 'pnpm'
 
       - name: Cache dependencies
-        uses: actions/cache@v3
+        uses: actions/cache@v4
         with:
           path: |
             ~/.pnpm-store
@@ -54,7 +54,7 @@ jobs:
         run: pnpm --filter demo build
 
       - name: Deploy to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v3
+        uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./packages/demo/dist
@@ -62,7 +62,7 @@ jobs:
           cname: 3d-model-viewer.quebi.de
 
       - name: Upload demo artifact
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: demo-build
           path: packages/demo/dist
