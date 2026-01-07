@@ -53,17 +53,14 @@ jobs:
       - name: Build demo application
         run: pnpm --filter demo build
 
-      - name: Deploy to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v4
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./packages/demo/dist
-          publish_branch: gh-pages
-          cname: 3d-viewer.quebi.de
+      - name: Setup Pages
+        uses: actions/configure-pages@v4
 
-      - name: Upload demo artifact
-        uses: actions/upload-artifact@v4
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
         with:
-          name: demo-build
-          path: packages/demo/dist
-          retention-days: 7
+          path: ./packages/demo/dist
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
