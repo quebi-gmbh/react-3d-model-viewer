@@ -59,7 +59,7 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./packages/demo/dist
           publish_branch: gh-pages
-          cname: 3d-model-viewer.quebi.de
+          cname: 3d-viewer.quebi.de
 
       - name: Upload demo artifact
         uses: actions/upload-artifact@v4
