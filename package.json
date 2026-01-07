@@ -1,0 +1,31 @@
+{
+  "name": "react-3d-model-viewer-monorepo",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Monorepo for react-3d-model-viewer library and demo application",
+  "scripts": {
+    "build": "pnpm -r build",
+    "build:viewer": "pnpm --filter react-3d-model-viewer build",
+    "build:demo": "pnpm --filter demo build",
+    "dev:viewer": "pnpm --filter react-3d-model-viewer dev",
+    "dev:demo": "pnpm --filter demo dev",
+    "dev": "pnpm --filter demo dev --host",
+    "typecheck": "pnpm -r typecheck",
+    "clean": "pnpm -r exec rm -rf dist node_modules .turbo"
+  },
+  "keywords": [
+    "react",
+    "3d",
+    "model",
+    "viewer",
+    "three.js",
+    "monorepo"
+  ],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^20.10.0",
+    "typescript": "^5.3.3",
+    "vite": "^5.0.10"
+  }
+}

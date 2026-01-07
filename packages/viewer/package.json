@@ -1,0 +1,97 @@
+{
+  "name": "react-3d-model-viewer",
+  "version": "1.0.0",
+  "description": "Modular React components for 3D model visualization with Three.js - supports STL, OBJ, GLTF/GLB, FBX, DAE, 3DS formats",
+  "type": "module",
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    },
+    "./core": {
+      "import": "./dist/core/index.mjs",
+      "require": "./dist/core/index.js",
+      "types": "./dist/core/index.d.ts"
+    },
+    "./controls": {
+      "import": "./dist/controls/index.mjs",
+      "require": "./dist/controls/index.js",
+      "types": "./dist/controls/index.d.ts"
+    },
+    "./utils": {
+      "import": "./dist/utils/index.mjs",
+      "require": "./dist/utils/index.js",
+      "types": "./dist/utils/index.d.ts"
+    },
+    "./ui": {
+      "import": "./dist/ui/index.mjs",
+      "require": "./dist/ui/index.js",
+      "types": "./dist/ui/index.d.ts"
+    }
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "dev": "vite build --watch",
+    "build": "tsc && vite build",
+    "typecheck": "tsc --noEmit"
+  },
+  "keywords": [
+    "react",
+    "3d",
+    "model",
+    "viewer",
+    "three.js",
+    "threejs",
+    "react-three-fiber",
+    "drei",
+    "stl",
+    "obj",
+    "gltf",
+    "glb",
+    "fbx",
+    "dae",
+    "collada",
+    "3ds",
+    "visualization",
+    "cad",
+    "3d-printing"
+  ],
+  "author": "",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yourusername/react-3d-model-viewer.git"
+  },
+  "peerDependencies": {
+    "@react-three/drei": "^9.95.0",
+    "@react-three/fiber": "^8.15.0",
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0",
+    "three": "^0.160.0"
+  },
+  "dependencies": {
+    "jszip": "^3.10.1",
+    "three-stdlib": "^2.28.0"
+  },
+  "optionalDependencies": {
+    "primereact": "^10.5.0"
+  },
+  "devDependencies": {
+    "@types/react": "^18.2.45",
+    "@types/react-dom": "^18.2.18",
+    "@types/three": "^0.160.0",
+    "@vitejs/plugin-react": "^4.2.1",
+    "terser": "^5.44.1",
+    "typescript": "^5.3.3",
+    "vite": "^5.0.10",
+    "vite-plugin-dts": "^3.7.0"
+  }
+}
